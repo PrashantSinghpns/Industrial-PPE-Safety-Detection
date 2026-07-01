@@ -33,6 +33,8 @@ def parse_detections(results):
 def draw_boxes(frame, boxes, confs, class_ids, class_names):
     for box, conf, cls in zip(boxes, confs, class_ids):
         x1, y1, x2, y2 = box.astype(int)
+        if cls >= len(class_names):
+            continue
         label = f"{class_names[cls]} {conf:.2f}"
         color = (0, 255, 0) if "no" not in class_names[cls] else (0, 0, 255)
         cv2.rectangle(frame, (x1, y1), (x2, y2), color, 2)
@@ -55,6 +57,8 @@ def detect_violations(boxes, confs, class_ids, class_names, iou_threshold=0.05):
     idx = {name: i for i, name in enumerate(class_names)}
 
     for box, conf, cls in zip(boxes, confs, class_ids):
+        if cls >= len(class_names):
+            continue
         if class_names[cls] in ["no_helmet", "no_vest"]:
             violations.append((class_names[cls], box, conf))
 
