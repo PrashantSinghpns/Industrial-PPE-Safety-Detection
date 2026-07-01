@@ -46,12 +46,12 @@ Industrial-PPE-Safety-Detection/
 ├── src/
 │   ├── train.py
 │   ├── detect_image.py
-│   ├── detect_video.py
+│   ├── file_inference.py
 │   ├── realtime_webcam.py
 │   ├── violation_alert.py
 │   ├── logger.py
 │   ├── utils.py
-│   └── export_onnx.py
+│   └── model_conversion.py
 ├── outputs/
 │   ├── screenshots/
 │   ├── videos/
