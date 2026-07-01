@@ -177,7 +177,7 @@ See `docs/edge_deployment_notes.md` for details.
 - Implemented helmet and safety vest detection with violation alert generation, screenshot capture and CSV-based compliance logging.
 - Optimised inference pipeline with confidence thresholding, FPS monitoring and ONNX export support for edge deployment on Raspberry Pi/Jetson-class devices.
 
-## Interview Explanation
+## Explanation
 
 This project demonstrates computer vision, object detection, dataset handling, model inference, edge deployment thinking and clean Python engineering. It is aligned with industrial AI-IoT roles where computer vision is used for safety, compliance and productivity monitoring.
 
