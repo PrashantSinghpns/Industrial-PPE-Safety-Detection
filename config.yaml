@@ -1,0 +1,13 @@
+dataset_yaml: data/ppe_dataset.yaml
+model: yolov8s.pt
+img_size: 640
+conf_threshold: 0.25
+iou_threshold: 0.45
+classes:
+  - person
+  - helmet
+  - no_helmet
+  - safety_vest
+  - no_vest
+output_dir: outputs
+device: cpu
